@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#11100f">
+    <meta name="description" content="Your favorite heroes from the Deadlock roster.">
+    <title>Deadlock — Favorite Heroes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body data-page="favorites">
+    <div class="page-backdrop" aria-hidden="true"></div>
+    <main>
+        <section class="roster-section" aria-label="Favorite Deadlock heroes">
+            <header class="site-header">
+                <a class="brand" href="index.html" aria-label="Back to the Deadlock roster">
+                    <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+                        <path d="M20 2 37 12v16L20 38 3 28V12L20 2Z" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <path d="M20 8 31 14.5v11L20 32 9 25.5v-11L20 8Z" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M20 12v16M12 16.5l16 7M28 16.5l-16 7" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                    <span class="brand-word">DEADLOCK</span>
+                </a>
+                <div class="header-actions">
+                    <span class="header-caption">FAVORITES <span>·</span> <span id="hero-count">00</span> FIGHTERS</span>
+                    <a class="page-link" href="index.html#roster">BACK TO ROSTER</a>
+                </div>
+            </header>
+
+            <div class="roster">
+                <section class="intro" aria-labelledby="roster-title">
+                    <p class="eyebrow"><span></span> YOUR COLLECTION</p>
+                    <h2 id="roster-title">Favorite <em>fighters.</em></h2>
+                    <p class="intro-copy">Your picked heroes, all in one place. Use the star on any fighter to add or remove them.</p>
+                </section>
+
+                <section class="roster-grid" id="roster-grid" aria-label="Favorite characters"></section>
+                <p class="empty-favorites" id="empty-favorites" hidden>No favorites yet. Visit the roster and star the heroes you want to keep close.</p>
+                <p class="form-message" id="favorite-message" role="status" aria-live="polite"></p>
+                <p class="roster-note">YOUR PICKS <span>·</span> BUILT FOR THE FIGHT</p>
+            </div>
+
+            <footer class="site-footer">
+                <span>THE CITY IS YOURS TO TAKE.</span>
+                <span class="footer-line" aria-hidden="true"></span>
+                <span>FAVORITE HEROES <span class="footer-accent">/</span> 002</span>
+            </footer>
+        </section>
+    </main>
+    <dialog class="hero-dialog" id="hero-dialog" aria-labelledby="detail-name">
+        <button class="dialog-close" id="dialog-close" type="button" aria-label="Close character details">×</button>
+        <div class="detail-layout">
+            <div class="detail-portrait" id="detail-portrait">
+                <span class="detail-portrait-placeholder" id="detail-placeholder" aria-hidden="true"></span>
+                <img class="detail-portrait-image" id="detail-image" alt="" hidden>
+            </div>
+            <div class="detail-copy">
+                <p class="detail-eyebrow"><span></span> CHARACTER FILE <span class="detail-id" id="detail-id"></span></p>
+                <h2 id="detail-name"></h2>
+                <p class="detail-role"><span class="role-dot"></span><span id="detail-role"></span></p>
+                <p class="detail-lore" id="detail-lore"></p>
+            </div>
+        </div>
+    </dialog>
+</body>
+</html>
